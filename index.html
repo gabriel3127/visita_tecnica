@@ -71,33 +71,33 @@
             <div class="form-group">
                 <label>Como o cliente avalia nosso ATENDIMENTO?</label>
                 <div class="rating-group" data-rating="atendimento">
-                    <div class="rating-option" data-value="excelente">Excelente</div>
-                    <div class="rating-option" data-value="bom">Bom</div>
-                    <div class="rating-option" data-value="regular">Regular</div>
-                    <div class="rating-option" data-value="ruim">Ruim</div>
-                    <div class="rating-option" data-value="nao-opinou">Não opinou</div>
+                    <div class="rating-option rating-pessimo" data-value="nao-opinou">Péssimo</div>
+                    <div class="rating-option rating-ruim" data-value="ruim">Ruim</div>
+                    <div class="rating-option rating-regular" data-value="regular">Regular</div>
+                    <div class="rating-option rating-bom" data-value="bom">Bom</div>
+                    <div class="rating-option rating-excelente" data-value="excelente">Excelente</div>
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Como o cliente avalia nossa VARIEDADE DE PRODUTOS?</label>
                 <div class="rating-group" data-rating="variedade">
-                    <div class="rating-option" data-value="excelente">Excelente</div>
-                    <div class="rating-option" data-value="bom">Bom</div>
-                    <div class="rating-option" data-value="regular">Regular</div>
-                    <div class="rating-option" data-value="ruim">Ruim</div>
-                    <div class="rating-option" data-value="nao-opinou">Não opinou</div>
+                    <div class="rating-option rating-pessimo" data-value="nao-opinou">Péssimo</div>
+                    <div class="rating-option rating-ruim" data-value="ruim">Ruim</div>
+                    <div class="rating-option rating-regular" data-value="regular">Regular</div>
+                    <div class="rating-option rating-bom" data-value="bom">Bom</div>
+                    <div class="rating-option rating-excelente" data-value="excelente">Excelente</div>
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Como o cliente avalia nossa ENTREGA?</label>
                 <div class="rating-group" data-rating="entrega">
-                    <div class="rating-option" data-value="excelente">Excelente</div>
-                    <div class="rating-option" data-value="bom">Bom</div>
-                    <div class="rating-option" data-value="regular">Regular</div>
-                    <div class="rating-option" data-value="ruim">Ruim</div>
-                    <div class="rating-option" data-value="nao-opinou">Não opinou</div>
+                    <div class="rating-option rating-pessimo" data-value="nao-opinou">Péssimo</div>
+                    <div class="rating-option rating-ruim" data-value="ruim">Ruim</div>
+                    <div class="rating-option rating-regular" data-value="regular">Regular</div>
+                    <div class="rating-option rating-bom" data-value="bom">Bom</div>
+                    <div class="rating-option rating-excelente" data-value="excelente">Excelente</div>
                 </div>
             </div>
 
@@ -146,13 +146,12 @@
 
             <div class="form-group">
                 <label for="volume-atual">Qual o volume/percentual aproximado dos nossos produtos que o cliente utiliza?</label>
-                <select id="volume-atual" name="volume-atual">
-                    <option value="">Selecione...</option>
-                    <option value="0-25">0% a 25% das necessidades</option>
-                    <option value="26-50">26% a 50% das necessidades</option>
-                    <option value="51-75">51% a 75% das necessidades</option>
-                    <option value="76-100">76% a 100% das necessidades</option>
-                </select>
+                <div class="rating-group" data-rating="volume-atual">
+                    <div class="rating-option volume-baixo" data-value="0-25">📊 0% a 25%</div>
+                    <div class="rating-option volume-medio" data-value="26-50">📈 26% a 50%</div>
+                    <div class="rating-option volume-alto" data-value="51-75">📊 51% a 75%</div>
+                    <div class="rating-option volume-maximo" data-value="76-100">📈 76% a 100%</div>
+                </div>
             </div>
 
             <div class="form-group">

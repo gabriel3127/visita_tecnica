@@ -33,7 +33,7 @@ function salvarRelatorio() {
         },
         oportunidades: {
             produtos_nossos: Array.from(document.querySelectorAll('input[name="produtos-nossos"]:checked')).map(cb => cb.value),
-            volume_atual: document.getElementById('volume-atual').value,
+            volume_atual: document.querySelector('[data-rating="volume-atual"] .selected')?.dataset.value || '',
             motivo_nao_compra: document.getElementById('motivo-nao-compra').value,
             oportunidades: Array.from(document.querySelectorAll('input[name="oportunidades"]:checked')).map(cb => cb.value),
             detalhes_oportunidades: document.getElementById('detalhes-oportunidades').value,
@@ -107,6 +107,3 @@ function salvarRelatorio() {
 
     alert('Relatório salvo com sucesso!');
 }
-
-// Define a data atual por padrão
-document.getElementById('data').valueAsDate = new Date();

@@ -69,13 +69,60 @@ textarea {
     font-size: 12px;
 }
 .rating-option:hover {
-    background-color: #e8f5e8;
+    background-color: #e8f0ff;
     border-color: #214194;
 }
+/* Garantir que os estilos de seleção tenham prioridade sobre as cores específicas */
 .rating-option.selected {
-    background-color: #214194;
-    color: white;
-    border-color: #214194;
+    background-color: #214194 !important;
+    color: white !important;
+    border: 3px solid #214194 !important;
+    box-shadow: 0 0 10px rgba(33, 65, 148, 0.5) !important;
+    transform: scale(1.1) !important;
+    font-weight: bold !important;
+    position: relative;
+    z-index: 10;
+}
+
+/* Estilos específicos para cada cor quando selecionada */
+.rating-pessimo.selected {
+    background-color: #f44336 !important;
+    color: white !important;
+    border-color: #f44336 !important;
+    box-shadow: 0 0 10px rgba(244, 67, 54, 0.5) !important;
+}
+
+.rating-ruim.selected {
+    background-color: #ff9800 !important;
+    color: white !important;
+    border-color: #ff9800 !important;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5) !important;
+}
+
+.rating-regular.selected {
+    background-color: #ffeb3b !important;
+    color: #333 !important;
+    border-color: #ffeb3b !important;
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.5) !important;
+}
+
+.rating-bom.selected {
+    background-color: #4caf50 !important;
+    color: white !important;
+    border-color: #4caf50 !important;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5) !important;
+}
+
+.rating-excelente.selected {
+    background-color: #2196f3 !important;
+    color: white !important;
+    border-color: #2196f3 !important;
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5) !important;
+}
+
+/* Garantir que o hover não interfira no selected */
+.rating-option.selected:hover {
+    transform: scale(1.1) !important;
 }
 .checkbox-group {
     display: grid;
@@ -110,7 +157,126 @@ textarea {
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
+/* Melhorias para Mobile-Friendly */
+
+/* 1. Aumentar tamanhos de fonte para melhor legibilidade mobile */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 16px; /* Evita zoom automático no iOS */
+    }
+    
+    .header h1 {
+        font-size: 24px;
+    }
+    
+    .header h2 {
+        font-size: 18px;
+    }
+    
+    .section h3 {
+        font-size: 20px;
+    }
+    
+    /* 2. Botões mais touch-friendly */
+    .rating-option {
+        padding: 12px 18px; /* Mínimo 44px de altura para touch */
+        font-size: 14px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+    
+    /* 3. Inputs maiores e mais fáceis de usar */
+    input[type="text"], 
+    input[type="date"], 
+    input[type="email"], 
+    select, 
+    textarea {
+        padding: 15px;
+        font-size: 16px; /* Evita zoom no iOS */
+        min-height: 44px;
+    }
+    
+    /* 4. Botão de salvar maior */
+    .btn-save {
+        width: 100%;
+        padding: 15px 30px;
+        font-size: 18px;
+        min-height: 50px;
+    }
+    
+    /* 5. Melhor espaçamento para touch */
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .rating-group {
+        gap: 12px;
+        flex-direction: column;
+    }
+    
+    /* 6. Container com melhor padding */
+    .form-container {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    /* 7. Header mais compacto */
+    .header {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    /* 8. Checkbox items maiores */
+    .checkbox-item {
+        padding: 10px;
+        min-height: 44px;
+    }
+    
+    .checkbox-item input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* 9. Breakpoint adicional para telas muito pequenas */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    
+    .form-container {
+        padding: 10px;
+    }
+    
+    .rating-option {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+    
+    .section h3 {
+        font-size: 18px;
+    }
+}
+
+/* 10. Melhorar acessibilidade touch */
+.rating-option, .btn-save, input, select, textarea {
+    -webkit-tap-highlight-color: rgba(33, 65, 148, 0.3);
+}
+
+/* 11. Evitar zoom horizontal */
+* {
+    box-sizing: border-box;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+.two-columns {
     .two-columns {
         grid-template-columns: 1fr;
     }
@@ -120,4 +286,185 @@ textarea {
     .checkbox-group {
         grid-template-columns: 1fr;
     }
+}
+/* Cores específicas para volume de produtos */
+.volume-baixo {
+    background-color: #ffebee;
+    border-color: #f44336;
+    color: #c62828;
+}
+
+.volume-baixo:hover,
+.volume-baixo.selected {
+    background-color: #f44336;
+    color: white;
+    border-color: #f44336;
+}
+
+.volume-medio {
+    background-color: #fff3e0;
+    border-color: #ff9800;
+    color: #e65100;
+}
+
+.volume-medio:hover,
+.volume-medio.selected {
+    background-color: #ff9800;
+    color: white;
+    border-color: #ff9800;
+}
+
+.volume-alto {
+    background-color: #e8f5e8;
+    border-color: #4caf50;
+    color: #2e7d32;
+}
+
+.volume-alto:hover,
+.volume-alto.selected {
+    background-color: #4caf50;
+    color: white;
+    border-color: #4caf50;
+}
+
+.volume-maximo {
+    background-color: #e3f2fd;
+    border-color: #2196f3;
+    color: #1565c0;
+}
+
+.volume-maximo:hover,
+.volume-maximo.selected {
+    background-color: #2196f3;
+    color: white;
+    border-color: #2196f3;
+}
+/* Cores para representar satisfação do cliente */
+.rating-pessimo {
+    background-color: #ffebee;
+    border-color: #f44336;
+    color: #c62828;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.rating-pessimo:hover {
+    background-color: #ffcdd2;
+    border-color: #d32f2f;
+}
+
+.rating-pessimo.selected {
+    background-color: #f44336 !important;
+    color: white !important;
+    border-color: #f44336 !important;
+    box-shadow: 0 0 10px rgba(244, 67, 54, 0.5) !important;
+    transform: scale(1.1) !important;
+    font-weight: bold !important;
+    position: relative;
+    z-index: 10;
+}
+
+.rating-ruim {
+    background-color: #fff3e0;
+    border-color: #ff9800;
+    color: #e65100;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.rating-ruim:hover {
+    background-color: #ffe0b2;
+    border-color: #f57c00;
+}
+
+.rating-ruim.selected {
+    background-color: #ff9800 !important;
+    color: white !important;
+    border-color: #ff9800 !important;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5) !important;
+    transform: scale(1.1) !important;
+    font-weight: bold !important;
+    position: relative;
+    z-index: 10;
+}
+
+.rating-regular {
+    background-color: #fffde7;
+    border-color: #ffeb3b;
+    color: #f57f17;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.rating-regular:hover {
+    background-color: #fff9c4;
+    border-color: #fbc02d;
+}
+
+.rating-regular.selected {
+    background-color: #ffeb3b !important;
+    color: #333 !important;
+    border-color: #ffeb3b !important;
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.5) !important;
+    transform: scale(1.1) !important;
+    font-weight: bold !important;
+    position: relative;
+    z-index: 10;
+}
+
+.rating-bom {
+    background-color: #e8f5e8;
+    border-color: #4caf50;
+    color: #2e7d32;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.rating-bom:hover {
+    background-color: #c8e6c9;
+    border-color: #388e3c;
+}
+
+.rating-bom.selected {
+    background-color: #4caf50 !important;
+    color: white !important;
+    border-color: #4caf50 !important;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5) !important;
+    transform: scale(1.1) !important;
+    font-weight: bold !important;
+    position: relative;
+    z-index: 10;
+}
+
+.rating-excelente {
+    background-color: #e3f2fd;
+    border-color: #2196f3;
+    color: #1565c0;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.rating-excelente:hover {
+    background-color: #bbdefb;
+    border-color: #1976d2;
+}
+
+.rating-excelente.selected {
+    background-color: #2196f3 !important;
+    color: white !important;
+    border-color: #2196f3 !important;
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5) !important;
+    transform: scale(1.1) !important;
+    font-weight: bold !important;
+    position: relative;
+    z-index: 10;
+}
+
+/* Garantir que o hover não interfira no selected para todas as classes */
+.rating-pessimo.selected:hover,
+.rating-ruim.selected:hover,
+.rating-regular.selected:hover,
+.rating-bom.selected:hover,
+.rating-excelente.selected:hover {
+    transform: scale(1.1) !important;
 }
