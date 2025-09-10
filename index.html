@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Visitas Técnicas - PSR Embalagens</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="header">
+        <h1>PSR EMBALAGENS</h1>
+        <h2>Relatório de Visita Técnica</h2>
+    </div>
+
+    <div class="form-container">
+        <div class="section">
+            <h3>📋 INFORMAÇÕES GERAIS</h3>
+            <div class="two-columns">
+                <div class="form-group">
+                    <label for="data">Data da Visita:</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+                <div class="form-group">
+                    <label for="vendedor">Nome do Vendedor/Técnico:</label>
+                    <input type="text" id="vendedor" name="vendedor" placeholder="Nome completo" required>
+                </div>
+            </div>
+            <div class="two-columns">
+                <div class="form-group">
+                    <label for="cliente">Nome do Cliente:</label>
+                    <input type="text" id="cliente" name="cliente" placeholder="Razão social ou nome fantasia" required>
+                </div>
+                <div class="form-group">
+                    <label for="contato">Pessoa de Contato:</label>
+                    <input type="text" id="contato" name="contato" placeholder="Nome e cargo">
+                </div>
+            </div>
+            <div class="two-columns">
+                <div class="form-group">
+                    <label for="segmento">Segmento do Cliente:</label>
+                    <select id="segmento" name="segmento">
+                        <option value="">Selecione...</option>
+                        <option value="restaurante">Restaurante</option>
+                        <option value="lanchonete">Lanchonete/Fast Food</option>
+                        <option value="padaria">Padaria/Confeitaria</option>
+                        <option value="eventos">Eventos/Buffet</option>
+                        <option value="delivery">Delivery</option>
+                        <option value="supermercado">Supermercado/Varejo</option>
+                        <option value="hotel">Hotel/Pousada</option>
+                        <option value="hospital">Hospital/Clínica</option>
+                        <option value="escola">Escola/Universidade</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="porte">Porte do Cliente:</label>
+                    <select id="porte" name="porte">
+                        <option value="">Selecione...</option>
+                        <option value="pequeno">Pequeno (até 10 funcionários)</option>
+                        <option value="medio">Médio (11-50 funcionários)</option>
+                        <option value="grande">Grande (mais de 50 funcionários)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>⭐ FEEDBACK DO CLIENTE</h3>
+            
+            <div class="form-group">
+                <label>Como o cliente avalia nosso ATENDIMENTO?</label>
+                <div class="rating-group" data-rating="atendimento">
+                    <div class="rating-option" data-value="excelente">Excelente</div>
+                    <div class="rating-option" data-value="bom">Bom</div>
+                    <div class="rating-option" data-value="regular">Regular</div>
+                    <div class="rating-option" data-value="ruim">Ruim</div>
+                    <div class="rating-option" data-value="nao-opinou">Não opinou</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Como o cliente avalia nossa VARIEDADE DE PRODUTOS?</label>
+                <div class="rating-group" data-rating="variedade">
+                    <div class="rating-option" data-value="excelente">Excelente</div>
+                    <div class="rating-option" data-value="bom">Bom</div>
+                    <div class="rating-option" data-value="regular">Regular</div>
+                    <div class="rating-option" data-value="ruim">Ruim</div>
+                    <div class="rating-option" data-value="nao-opinou">Não opinou</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Como o cliente avalia nossa ENTREGA?</label>
+                <div class="rating-group" data-rating="entrega">
+                    <div class="rating-option" data-value="excelente">Excelente</div>
+                    <div class="rating-option" data-value="bom">Bom</div>
+                    <div class="rating-option" data-value="regular">Regular</div>
+                    <div class="rating-option" data-value="ruim">Ruim</div>
+                    <div class="rating-option" data-value="nao-opinou">Não opinou</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback-entrega">Comentários sobre o feedback:</label>
+                <textarea id="feedback-entrega" name="feedback-entrega" placeholder="Caso o cliente tenha algo a pontuar sobre os temas anteriores, escreva aqui..."></textarea>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>💼 OPORTUNIDADES DE NEGÓCIO</h3>
+            
+            <div class="form-group">
+                <label>Quais produtos NOSSOS o cliente já utiliza?</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="prod-marmitas" name="produtos-nossos" value="marmitas">
+                        <label for="prod-marmitas">Marmitas e embalagens food service</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="prod-copos" name="produtos-nossos" value="copos">
+                        <label for="prod-copos">Copos, potes e outros descartaveis</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="prod-hamburger" name="produtos-nossos" value="hamburger">
+                        <label for="prod-hamburger">Sacolas e bobinas</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="prod-eventos" name="produtos-nossos" value="eventos">
+                        <label for="prod-eventos">Produtos para eventos/festas</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="prod-higiene" name="produtos-nossos" value="higiene">
+                        <label for="prod-higiene">Produtos de higiene e limpeza</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="prod-sustentaveis" name="produtos-nossos" value="sustentaveis">
+                        <label for="prod-sustentaveis">Produtos sustentáveis</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="prod-outros-nossos" name="produtos-nossos" value="outros">
+                        <label for="prod-outros-nossos">Outros produtos PSR</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="volume-atual">Qual o volume/percentual aproximado dos nossos produtos que o cliente utiliza?</label>
+                <select id="volume-atual" name="volume-atual">
+                    <option value="">Selecione...</option>
+                    <option value="0-25">0% a 25% das necessidades</option>
+                    <option value="26-50">26% a 50% das necessidades</option>
+                    <option value="51-75">51% a 75% das necessidades</option>
+                    <option value="76-100">76% a 100% das necessidades</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="motivo-nao-compra">Por que o cliente NÃO compra outros produtos que oferecemos?</label>
+                <textarea id="motivo-nao-compra" name="motivo-nao-compra" placeholder="Preço, qualidade, desconhecimento, fornecedor atual, etc."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Que produtos/categorias o cliente utiliza que NÃO oferecemos?</label>                
+                <textarea id="detalhes-oportunidades" name="detalhes-oportunidades" placeholder="Especifique produtos mencionados, volumes estimados, fornecedores atuais, preços praticados, etc."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>O cliente demonstrou interesse em expandir as compras conosco?</label>
+                <div class="rating-group" data-rating="interesse-expansao">
+                    <div class="rating-option" data-value="nenhum">😞 Nenhum</div>
+                    <div class="rating-option" data-value="baixo">😐 Pouco</div>
+                    <div class="rating-option" data-value="medio">🙂 moderado</div>
+                    <div class="rating-option" data-value="alto">😊 Alto</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>⚠️ RECLAMAÇÕES DO CLIENTE</h3>
+            
+            <div class="form-group">
+                <label>O cliente fez alguma reclamação durante a visita?</label>
+                <div class="rating-group" data-rating="tem-reclamacao">
+                    <div class="rating-option" data-value="sim">Sim</div>
+                    <div class="rating-option" data-value="nao">Não</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Tipo de reclamação (marque todas que se aplicam):</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="recl-qualidade" name="tipo-reclamacao" value="qualidade">
+                        <label for="recl-qualidade">Qualidade dos produtos</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="recl-preco" name="tipo-reclamacao" value="preco">
+                        <label for="recl-preco">Preços praticados</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="recl-entrega" name="tipo-reclamacao" value="entrega">
+                        <label for="recl-entrega">Atraso na entrega</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="recl-atendimento" name="tipo-reclamacao" value="atendimento">
+                        <label for="recl-atendimento">Atendimento</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="recl-produto-errado" name="tipo-reclamacao" value="produto-errado">
+                        <label for="recl-produto-errado">Produto errado/trocado</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="recl-embalagem" name="tipo-reclamacao" value="embalagem">
+                        <label for="recl-embalagem">Problemas na embalagem</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="recl-disponibilidade" name="tipo-reclamacao" value="disponibilidade">
+                        <label for="recl-disponibilidade">Falta de produtos em estoque</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="recl-cobranca" name="tipo-reclamacao" value="cobranca">
+                        <label for="recl-cobranca">Problemas de cobrança/faturamento</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="recl-comunicacao" name="tipo-reclamacao" value="comunicacao">
+                        <label for="recl-comunicacao">Falha na comunicação</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="recl-outros" name="tipo-reclamacao" value="outros">
+                        <label for="recl-outros">Outros (especificar abaixo)</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="detalhes-reclamacao">Descreva detalhadamente a(s) reclamação(ões):</label>
+                <textarea id="detalhes-reclamacao" name="detalhes-reclamacao" placeholder="Detalhe o que aconteceu, quando, qual produto/serviço envolvido, impacto para o cliente, etc."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Gravidade da reclamação:</label>
+                <div class="rating-group" data-rating="gravidade-reclamacao">
+                    <div class="rating-option" data-value="baixa">comentário pontual</div>
+                    <div class="rating-option" data-value="media">incômodo moderado</div>
+                    <div class="rating-option" data-value="alta">problema significativo</div>
+                    <div class="rating-option" data-value="critica">cliente muito insatisfeito</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="acao-imediata">Ação imediata tomada durante a visita:</label>
+                <textarea id="acao-imediata" name="acao-imediata" placeholder="O que foi feito na hora para resolver ou amenizar a situação?"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="solucao-proposta">Solução proposta para resolução:</label>
+                <textarea id="solucao-proposta" name="solucao-proposta" placeholder="Como pretende resolver definitivamente? Prazos, responsáveis, etc."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>O cliente ficou satisfeito com a solução proposta?</label>
+                <div class="rating-group" data-rating="satisfacao-solucao">
+                    <div class="rating-option" data-value="nao-respondeu">🤷 Não opinou</div>
+                    <div class="rating-option" data-value="insatisfeito">😞 Insatisfeito</div>
+                    <div class="rating-option" data-value="parcialmente">😐 Parcialmente satisfeito</div>
+                    <div class="rating-option" data-value="satisfeito">🙂 Satisfeito</div>
+                    <div class="rating-option" data-value="muito-satisfeito">😊 Muito satisfeito</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>📝 OBSERVAÇÕES E PRÓXIMOS PASSOS</h3>
+            
+            <div class="form-group">
+                <label for="observacoes">Observações gerais da visita:</label>
+                <textarea id="observacoes" name="observacoes" placeholder="Impressões gerais, condições do estabelecimento, relacionamento com concorrência, etc."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="proximos-passos">Próximos passos definidos:</label>
+                <textarea id="proximos-passos" name="proximos-passos" placeholder="Enviar orçamento de produto X, agendar nova visita, providenciar amostras, etc."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="prioridade">Prioridade para acompanhamento:</label>
+                <div class="rating-group" data-rating="prioridade">
+                    <div class="rating-option" data-value="baixa">🔵 Baixa - manter relacionamento</div>
+                    <div class="rating-option" data-value="media">🟡 Média - oportunidades interessantes</div>
+                    <div class="rating-option" data-value="alta">🔴 Alta - cliente com grande potencial</div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn-save" onclick="salvarRelatorio()">💾 Salvar Relatório</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
