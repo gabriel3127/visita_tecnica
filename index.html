@@ -21,9 +21,14 @@
                     <input type="date" id="data" name="data" required>
                 </div>
                 <div class="form-group">
-                    <label for="vendedor">Nome do consultor:</label>
-                    <select id="segmento" name="segmento">
+                    <label for="consultor">Nome do consultor:</label>
+                    <select id="consultor" name="consultor">
                         <option value="">Selecione...</option>
+                        <option value="gabriel">Gabriel</option>
+                        <option value="geane">Geane</option>
+                        <option value="joelma">Joelma</option>
+                        <option value="rogerio">Rogerio</option>
+                        <option value="ranna">Ranna</option>
                     </select>
                 </div>
             </div>
@@ -103,8 +108,8 @@
             </div>
 
             <div class="form-group">
-                <label for="feedback-entrega">Comentários sobre o feedback:</label>
-                <textarea id="feedback-entrega" name="feedback-entrega" placeholder="Caso o cliente tenha algo a pontuar sobre os temas anteriores, escreva aqui..."></textarea>
+                <label for="comentario">Comentários sobre o feedback:</label>
+                <textarea id="comentario" name="comentario" placeholder="Caso o cliente tenha algo a pontuar sobre os temas anteriores, escreva aqui..."></textarea>
             </div>
         </div>
 
@@ -293,10 +298,10 @@
             </div>
         </div>
 
-        <button type="button" class="btn-save" onclick="salvarRelatorio()">💾 Salvar Relatório</button>
+        <button type="button" class="btn-save" id="btnSalvar">💾 Salvar Relatório</button>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="main.js"></script>
-
 </body>
 </html>
